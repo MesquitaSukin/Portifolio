@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Silkscreen:wght@400;700&display=swap');
+/* "Funnel Display", sans-serif
+"Silkscreen", sans-serif */
+
+:root {
+    --branco: #ECEAFF;
+    --verde: #AFE27B;
+    --rosa: #db77b3;
+    /*--roxo: #160331;*/
+        --roxo: #220649;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#verde {
+    background: var(--verde);
+}
+
+#roxo {
+    background: var(--roxo);
+    color: var(--branco);
+}
+
+#rosa {
+    background: var(--rosa);
+}
+
+body {
+    font-family: "Funnel Display", sans-serif;
+    background-image: url('win\ xp\ 2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--roxo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 20px;
+    cursor: none;
+}
+
+/* cursor config */
+.custom-cursor {
+  width: 45px;
+  height: 45px;
+  position: fixed; /* Fixado na tela */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* ESSENCIAL */
+  z-index: 9999; /* Garante que fique em cima de tudo */
+  background-image: url('cursor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-out;
+}
+.custom-cursor.active {
+  transform: scale(1.2) rotate(-10deg); /* Aumenta e reajusta o centro */
+}
+/* esconde o cursor padrão em TUDO */
+* {
+  cursor: none !important;
+}
+
+/* elementos clicáveis não mostrem a mãozinha */
+a, button, input, select, textarea, [role="button"] {
+  cursor: none !important;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  margin-left: 50%;
+}
+
+p {
+    font-size: 17px;
+    font-weight: 500;
+}
+header {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 3%;
+  width: 60%;
+  height: 60px;
+  border-radius: 90px;
+  background-color: var(--rosa); 
+  border: 3px solid var(--roxo);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    height: 60px;
+    padding: 0px 40px;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 20px;
+    margin-right: 50px;
+}
+nav a {
+    color: var(--roxo);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: var(--verde);
+}
+
+/* Windows config */
+.card {
+  font-family: "Funnel Display", sans-serif;
+  height: auto;
+  translate: -6px -6px;
+  background-color: var(--branco);
+  border: 3px solid var(--roxo);
+  border-radius: 7px;
+  box-shadow: 7px 7px 0px var(--roxo);
+  overflow: hidden;
+  transition: all 0.1s ease;
+}
+.card.show {
+  opacity: 1;
+}
+
+.head {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+  background: #aee27bbd;
+  padding: 5px 20px;
+  color: var(--roxo);
+  border-bottom: 3px solid var(--roxo);
+}
+.card a {
+  text-decoration: none;
+}
+
+.content {
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card:hover {
+  translate: -6px;
+}
+/* Button config */
+
+.button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 3px solid var(--roxo);
+  box-shadow: 3px 3px 0 var(--roxo);
+  font-weight: 750;
+  background: var(--rosa);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.button a{
+  text-decoration: none;
+  color: var(--roxo);
+}
+
+.button:hover {
+  translate: 1.5px 1.5px;
+  box-shadow: 1.5px 1.5px 0 var(--roxo);
+  background: var(--verde);
+}
+
+.button:active {
+  translate: 3px 3px;
+  box-shadow: 0 0 0 var(--roxo);
+}
+
+footer {
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--branco);
+    background-color: var(--roxo);
+    width: 100%;
+}
+footer p {
+    font-size: 15px;
+}
+
+footer .links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--verde);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* animação aparecer */
+
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.show {
+  opacity: 1;
+  transform: translate(0);
+}
