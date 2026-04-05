@@ -1,3 +1,4 @@
+// animação aparecer cards
 const elementAnimacao = document.querySelectorAll('.card')
 const observador = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
