@@ -26,3 +26,19 @@ links.forEach(link => {
   link.addEventListener('mouseenter', () => cursor.classList.add('active'));
   link.addEventListener('mouseleave', () => cursor.classList.remove('active'));
 });
+
+// menu hamburguer
+const menu = document.getElementById('menu');
+const menuNav = document.getElementById('menu-nav');
+
+menu.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita fechar na hora
+    menuNav.classList.toggle('active');
+});
+
+// fechar ao clicar fora
+document.addEventListener("click", (e) => {
+  if (!menuNav.contains(e.target) && !menu.contains(e.target)) {
+    menuNav.classList.remove("active");
+  }
+});

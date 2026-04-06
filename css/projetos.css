@@ -53,3 +53,21 @@
     padding: 5px 10px;
     border-radius: 7px;
 }
+
+@media screen and (max-width: 920px) {
+    .side {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+    .card p, span {
+        font-size: 20px;
+    }
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+    
+}

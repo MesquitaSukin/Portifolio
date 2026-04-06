@@ -73,7 +73,7 @@ a, button, input, select, textarea, [role="button"] {
 .logo {
   width: 90px;
   height: auto;
-  margin-left: 50%;
+  margin-left: 40px;
 }
 
 p {
@@ -223,18 +223,51 @@ footer a:hover {
   transform: translate(0);
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 920px) {
+
+  .logo {
+    width: 80px;
+    cursor: pointer;
+    margin: 7px;
+  }
+
   header {
-    width: 90%;
-    margin: 3% auto;
+    background-color: transparent;
+    border: none;
+    width: 100%;
   }
+
   nav {
-    gap: 5%;
-    font-size: 16px;
-    margin-right: 0;
+    position: absolute;
+      z-index: 1000;
+    top: 10%;
+    left: 15%;
+
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: var(--rosa);
+    border: 3px solid var(--roxo);
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+
+    /* ESCONDIDO por padrão */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  .content {
-    padding: 10px 20px;
-    font-size: 12px;
+
+  nav.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .head {
+    font-size: 20px;
   }
 }

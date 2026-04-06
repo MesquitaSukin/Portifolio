@@ -70,3 +70,40 @@
 #obj {
     width: 60%;
 }
+
+@media screen and (max-width: 920px) {
+    .side {
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+    }
+    
+    #sobre, #objetivo, #explorando, #ex, #obj {
+        width: 94%;
+        margin: 30px 0px 0px 0px;
+    }
+    #sobre .content, #objetivo .content, #explorando .content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #sob {
+        flex-direction: column-reverse;
+    }
+    #sobre .content {
+        font-size: 11px;
+    }
+    #img-key {
+        width: 80%;
+        height: auto;
+        margin-top: 40px;
+    }
+    #img-globo {
+        width: 30%;
+        height: auto;
+    }
+    #img-neko {
+        height: auto;
+        margin-top: 10px;
+    }
+}
